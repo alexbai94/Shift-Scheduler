@@ -31,6 +31,7 @@ insert into Shifts values('SatMor','Saturday','Morning');
 insert into Shifts values('SatEve','Saturday','Evening');
 insert into Shifts values('SatNit','Saturday','Night');
 
+
 insert into Employees(employeeId,userName,password,firstname,lastname,role,address,phonenumber,department) values(1,'admin','123','Jimmy','Wang','Manager','123 Main st','1234567890','Development');
 insert into Employees(employeeId,userName,password,firstname,lastname,role,address,phonenumber,department) values(2,'hayden','123','Hayden','Ng','Slave','123 Main st','1234567890','Development');
 insert into Employees(employeeId,userName,password,firstname,lastname,role,address,phonenumber,department) values(3,'kevin','123','Kevin','Tam','Employee','123 Main st','1234567890','Development');
@@ -46,11 +47,17 @@ insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('1','TueN
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('2','MonMor');
 insert into ShiftsEmployees(Employee_employeeId,Shifts_shiftId) values('3','MonMor');
 
+SET IDENTITY_INSERT ShiftSchedules ON
 insert into ShiftSchedules(shiftScheduleId, date, dayOfTheWeek, shiftType, empShiftScheduleID) values (5, '20120618 09:34:09 AM', 'Sunday', 'Morning', 5);
 insert into ShiftSchedules(shiftScheduleId, date, dayOfTheWeek, shiftType, empShiftScheduleID) values (4, '20150618 11:23:12 AM', 'Monday', 'Evening', 4);
 insert into ShiftSchedules(shiftScheduleId, date, dayOfTheWeek, shiftType, empShiftScheduleID) values (3, '20160618 12:34:32 AM', 'Tuesday', 'Morning', 3);
 insert into ShiftSchedules(shiftScheduleId, date, dayOfTheWeek, shiftType, empShiftScheduleID) values (2, '20170718 04:34:12 AM', 'Monday', 'Evening', 2);
 insert into ShiftSchedules(shiftScheduleId, date, dayOfTheWeek, shiftType, empShiftScheduleID) values (1, '20170719 11:44:06 AM', 'Tuesday', 'Evening', 1);
+insert into ShiftSchedules(shiftScheduleId, date, dayOfTheWeek, shiftType, empShiftScheduleID) values (6, '20170718 04:34:12 AM', 'Monday', 'Evening', 2);
+insert into ShiftSchedules(shiftScheduleId, date, dayOfTheWeek, shiftType, empShiftScheduleID) values (7, '20170411 03:21:06 PM', 'Tuesday', 'Night', 1);
+insert into ShiftSchedules(shiftScheduleId, date, dayOfTheWeek, shiftType, empShiftScheduleID) values (12, '20170413 04:34:12 AM', 'Monday', 'Evening', 2);
+insert into ShiftSchedules(shiftScheduleId, date, dayOfTheWeek, shiftType, empShiftScheduleID) values (9, '20170414 11:44:06 AM', 'Tuesday', 'Morning', 1);
+
 
 select * from employees;
 select * from Shifts;
